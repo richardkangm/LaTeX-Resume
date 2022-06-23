@@ -1,14 +1,283 @@
-\documentclass{resume}
+%-------------------------
+% Resume in Latex
+% Author : Abey George
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% \pagestyle{fancy}
+% \fancyhf{}  % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-0.1pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{document}
-% General Information %
-\head
-\name {Richard Kang}
-\address{2910 Cambridge Circus, Pearland, Texas, 77581}
-\address{(713)894-8362 \\ richardkangm@gmail.com}
-{Github}
-{https://github.com/richardkangm}
+
+%----------HEADING----------
 
 
+\begin{center}
+    {\Huge \scshape Richard Kang} \\ \vspace{1pt}
+    Dallas, Texas \\ \vspace{1pt}
+    \small \href{tel:+17138948362}{ \raisebox{-0.1\height}\faPhone\ \underline{713-894-8362} ~} \href{mailto:richardkangm@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{richardkangm@gmail.com}} ~ 
+    \href{https://linkedin.com/in/richard-kang-8b95361b9}{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{LinkedIn}}  ~
+    \href{https://github.com/richardkangm}{\raisebox{-0.2\height}\faGithub\ \underline{GitHub}} ~
+ 
+    \vspace{-8pt}
+\end{center}
 
 
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Texas at Dallas}{01/2021 -- 05/2023 (Expected)}
+      {B.S. Computer Science - \textbf{3.6/4.0}}{Richardson, TX}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{INTERNSHIP}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {USAA (Current) \href{certificate Link}{\raisebox{-0.1\height}}}{06/2022 -- 08/2022} 
+      {{Software Engineer Intern | Go, AWS (lambda), Java, Spring, Agile, Kafka}}{Plano, TX}
+      \resumeItemListStart
+        \resumeItem{\normalsize{Modernizing company's old APIs and data into cloud stores using Go and AWS}}
+        \resumeItem{\normalsize{Working on scrum ceremonies practicing agile software development strategies including test driven development }}
+      \resumeItemListEnd
+    
+    \resumeSubheading
+      {University of Texas at Dallas \href{certificate Link}{\raisebox{-0.1\height}}}{01/2022 -- 05/2022} 
+      {{Undergraduate Research | C/C++, Kali Linux, VMware, Metasploit}}{Richardson, TX}
+      \resumeItemListStart
+        \resumeItem{\normalsize{Created APT (Advanced Persistent Threat) scenarios that increased the behavioral analysis of malware detection research to 95\% accuracy}}
+        \resumeItem{\normalsize{Successfully infiltrated and retrieved valuable information from a target device through Kali Linux}}
+        \resumeItem{\normalsize{Created links between devices by hacking a vulnerable network}}
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+       \resumeProjectHeading
+           {\href{www.Google.com}{\textbf{\large{{Weather App}}} \href{Project Link}{\raisebox{-0.1\height}\faExternalLink }} $|$ \large\emph{{Kotlin, Android Studio}}}{Personal}
+          \vspace{-5pt}
+          \resumeItemListStart
+            \resumeItem{\normalsize{About project \textbf{key points to highlight}.}}
+            \resumeItem{\textcolor{accent} {\href{Live Project Link} {\underline{\normalsize{Live site here}}}}}
+          \resumeItemListEnd 
+          \vspace{1pt}
+          
+        \resumeProjectHeading
+          {\href{ProjectLink.com}{\textbf{\large{{Google Maps Clone}}} \href{Project Link}{\raisebox{-0.1\height}\faExternalLink }} $|$ \large{\emph{Kotlin, Android Studio}}}{Personal}
+          \vspace{0.1pt}
+          \resumeItemListStart
+            \resumeItem{\normalsize{About project \textbf{highlight key points}.}}
+            \resumeItem{\textcolor{accent} {\href{Project Link} {\underline{\normalsize{Download}}}}}
+          \resumeItemListEnd
+          \vspace{-1pt}
+          
+          \resumeProjectHeading
+          {\href{ProjectLink.com}{\textbf{\large{{Yelp Clone}}} \href{Project Link}{\raisebox{-0.1\height}\faExternalLink }} $|$ \large{\emph{Kotlin, Android Studio}}}{Personal}
+          \vspace{0.1pt}
+          \resumeItemListStart
+            \resumeItem{\normalsize{About Project \textbf{highlight key points} }}
+            
+          \resumeItemListEnd 
+          
+           \resumeProjectHeading
+          {\href{ProjectLink.com}{\textbf{\large{{Mass Texting App}}} \href{Project Link}{\raisebox{-0.1\height}\faExternalLink }} $|$ \large{\emph{Python}}}{Personal}
+          \vspace{0.1pt}
+          \resumeItemListStart
+            \resumeItem{\normalsize{About Project \textbf{highlight key points} }}
+            
+          \resumeItemListEnd 
+          
+    \resumeSubHeadingListEnd
+\vspace{-1pt}
+
+%
+
+%------RELEVANT COURSEWORK-------
+\section{COURSEWORK}
+    %\resumeSubHeadingListStart
+        \begin{multicols}{4}
+            \begin{itemize}[itemsep=3pt, parsep=3pt]
+                \item Data Structures \& Algorithms
+                \item Advanced Algorithm Design \& Analysis
+                \item Object Oriented Design
+                \item C/C++ Programming in UNIX
+                \item Computer Architecture
+                \item Database Management System (DBMS)
+                \item Android Development
+                \item Intro to Cybersecurity
+                \item Digital Logic
+            \end{itemize}
+        \end{multicols}
+        \vspace*{1.0\multicolsep}
+    %\resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{TECHNICAL SKILLS}
+\vspace{-10.0pt}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{\normalsize{Languages:}}{ \normalsize{Java, Kotlin, C/C++, Go, XML, SQL, HTML, CSS, JavaScript (Learning)}} \\
+     \textbf{\normalsize{Developer Tools:}}{ \normalsize{Android Studio, VS Code, Intellij, Eclipse}} \\
+     \textbf{\normalsize{Technologies/Frameworks: }}{\normalsize{Ktor, Linux, GitHub, Git}} \\
+    }}
+ \end{itemize}
+ \vspace{-15pt}
+
+
+%-----------INVOLVEMENT---------------
+\section{EXTRACURRICULAR}
+    \resumeSubHeadingListStart
+        \resumeSubheading{Lambda Phi Epsilon}{08/2018 -- 12/2020 }{{Vice President External}}{Houston, TX}
+            \resumeItemListStart
+                \vspace{10pt}
+                \resumeItem{\normalsize{About the role \textbf{and responsibilities carried out.}}}
+                \vspace{5pt}
+                \resumeItem{\normalsize{Participation Certificate.}}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+ \vspace{-11pt}
+ 
 \end{document}
+
